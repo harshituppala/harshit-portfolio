@@ -58,7 +58,9 @@ const Hero = () => {
                     <button className="btn-primary" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
                         View Projects
                     </button>
-                    <a href="#" target="_blank" rel="noopener noreferrer" className="btn-secondary">Download Resume</a>
+                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-secondary" download>
+                        Download Resume
+                    </a>
                 </div>
                 <div className="hero-links">
                     <a href="https://github.com/harshituppala" target="_blank" rel="noopener noreferrer">
