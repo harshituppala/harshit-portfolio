@@ -1,16 +1,77 @@
-# React + Vite
+Personal Portfolio — Harshit Uppala
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal developer portfolio, built to showcase my technical projects, skills, and background in a clean, modern, and professional way.
+It highlights my backend-focused work, DevOps interests, and real deployed applications.
 
-Currently, two official plugins are available:
+⸻
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Tech Stack
+•	React (Vite) — Frontend framework
+•	Modern CSS — Responsive layout, custom components
+•	GitHub Pages / Render — Deployment-ready
+•	SVG Icons — Lightweight, fast, accessible
 
-## React Compiler
+⸻
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📁 Project Sections
 
-## Expanding the ESLint configuration
+Featured Projects
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The portfolio includes live links and source code for my key projects:
+
+🔹 Pipeline Monitor
+Real-time ETL pipeline tracker with environment filters and execution metadata.
+Code: https://github.com/harshituppala/pipeline-monitor
+Live Demo: https://pipeline-monitor.onrender.com
+
+🔹 Multi-Agent Orchestrator
+A modular backend system coordinating Research, Analysis, and Task agents with Wikipedia API integration.
+Code: https://github.com/harshituppala/multi-agent-ai
+Live Demo: https://multi-agent-ai-1.onrender.com
+
+🔹 BitCheck
+A lightweight BTC address lookup tool with clean UI and live deployed backend.
+Code: https://github.com/harshituppala/bitcheck
+Live Demo: https://bitcheck-wrk5.onrender.com
+
+⸻
+
+🧠 Skills Highlighted
+•	Languages: JavaScript, Python, Java, SQL
+•	Backend: Node.js, Express, REST APIs
+•	Frontend: React, UI Components, CSS
+•	DevOps / Tools: Git, GitHub, Docker, AWS basics
+
+⸻
+
+🎓 Education
+
+B.Sc. Computer Science
+Memorial University of Newfoundland
+Minor in Business Administration — Expected Graduation: Dec 2026
+
+⸻
+
+📄 Resume
+
+A downloadable PDF is available directly in the portfolio:
+
+/public/resume.pdf
+
+Button on the live site triggers the download automatically.
+
+⸻
+
+To Run Locally type the following commnds into the terminal within the directory.
+
+npm install
+npm run dev
+
+Portfolio will start on:
+
+http://localhost:5173
+
+Contact
+•	Email: hkuppala@mun.ca
+•	LinkedIn: https://www.linkedin.com/in/harshit-kumar-uppala-8b65271a5
+•	GitHub: https://github.com/harshituppala
