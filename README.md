@@ -4,6 +4,11 @@ This is my personal developer portfolio, built to showcase my technical projects
 It highlights my backend-focused work, DevOps interests, and real deployed applications.
 
 ⸻
+Live Demo
+
+https://harshit-portfolio-tv36.onrender.com
+
+⸻
 
 🚀 Tech Stack
 •	React (Vite) — Frontend framework
