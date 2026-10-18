@@ -4,6 +4,32 @@ export type ProjectDetails = {
  architecture: string[]; decisions: string[]; validation: string[]; limitations: string[];
 };
 export const projectDetails: Record<string, ProjectDetails> = {
+ incidentdesk: {
+  "synopsis": "Investigate a failing checkout/payment service, inspect the evidence, and approve a bounded recovery with verification and rollback.",
+  "audience": "Engineers investigating incidents in an isolated operational service.",
+  "outcome": "Make the evidence, permitted change, approval and recovery result inspectable.",
+  "status": "Working local prototype \u00b7 hosted demo and real-user feedback pending",
+  "architecture": [
+    "Checkout/payment HTTP lab \u2192 correlated evidence",
+    "Rules or local model \u2192 evidence-bound proposal",
+    "Independent policy \u2192 human approval \u2192 guarded change",
+    "Repeated probes \u2192 verification \u2192 conditional rollback"
+  ],
+  "decisions": [
+    "Keep the action policy independent from model explanations.",
+    "Use real HTTP traffic and explicit incident variants.",
+    "Preserve failed model results; do not claim AI advantage from aggregate agreement."
+  ],
+  "validation": [
+    "The release owner records 41 passing Mac/Linux tests, rules passing 10 development and 8 reserved incidents, and local Qwen2.5 passing 7/10 and 6/8 respectively.",
+    "These are authored synthetic lab incidents; they do not establish production incident accuracy or an advantage over rules."
+  ],
+  "limitations": [
+    "Real external feedback and interview participation remain pending.",
+    "Public cloud demo is not yet verified; the source repository is available.",
+    "Production connectors, identity, cross-host isolation and service-level reliability are outside this prototype."
+  ]
+},
  atlas: {
   synopsis: 'A long business document lands on your desk. Hidden inside are requirements, deadlines, and obligations. ATLAS is being built to turn that document into a reviewable workspace: find each requirement, connect it to supporting evidence, and let a person make the final decision.',
   audience: 'Teams reviewing RFPs, contracts, and technical requirements.',

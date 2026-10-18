@@ -63,6 +63,48 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+{
+  "id": "incidentdesk",
+  "title": "IncidentDesk",
+  "year": "2026",
+  "genre": "Operational recovery \u2022 Prototype",
+  "logline": "Investigate a failing checkout/payment service, inspect the evidence, and approve a bounded recovery with verification and rollback.",
+  "stack": [
+    "Python",
+    "HTTP services",
+    "SQLite",
+    "Docker",
+    "Local models"
+  ],
+  "build": [
+    "A local operational recovery lab with correlated evidence, two recovery runbooks and explicit human approval.",
+    "Rules remain the default. Measured local-model failures and unfinished real-user feedback are documented."
+  ],
+  "features": [
+    "Evidence-bound recovery proposals",
+    "Human approval and stale-state guards",
+    "Verification and conditional rollback",
+    "Documented model failures"
+  ],
+  "metrics": [
+    {
+      "value": "Prototype",
+      "label": "Project status"
+    },
+    {
+      "value": "Source",
+      "label": "Public repository \u00b7 hosted demo pending"
+    }
+  ],
+  "github": "https://github.com/harshituppala/incidentdesk",
+  "palette": {
+    "from": "#102116",
+    "via": "#315a39",
+    "to": "#0a100c",
+    "accent": "#bdfa8c"
+  },
+  "motif": "flow"
+},
   {
     "id": "atlas",
     "title": "ATLAS",
