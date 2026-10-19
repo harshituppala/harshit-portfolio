@@ -8,7 +8,8 @@ export const projectDetails: Record<string, ProjectDetails> = {
   "synopsis": "Investigate a failing checkout/payment service, inspect the evidence, and approve a bounded recovery with verification and rollback.",
   "audience": "Engineers investigating incidents in an isolated operational service.",
   "outcome": "Make the evidence, permitted change, approval and recovery result inspectable.",
-  "status": "Working local prototype \u00b7 hosted demo and real-user feedback pending",
+  "status": "Hosted deterministic prototype · real-user feedback pending",
+  "liveUrl": "https://incidentdesk-g6pp.onrender.com",
   "architecture": [
     "Checkout/payment HTTP lab \u2192 correlated evidence",
     "Rules or local model \u2192 evidence-bound proposal",
@@ -22,11 +23,12 @@ export const projectDetails: Record<string, ProjectDetails> = {
   ],
   "validation": [
     "The release owner records 41 passing Mac/Linux tests, rules passing 10 development and 8 reserved incidents, and local Qwen2.5 passing 7/10 and 6/8 respectively.",
-    "These are authored synthetic lab incidents; they do not establish production incident accuracy or an advantage over rules."
+    "These are authored synthetic lab incidents; they do not establish production incident accuracy or an advantage over rules.",
+    "A recorded hosted payment-release investigation, human approval and recovery passed 240 fresh requests over 10.18 seconds on the free Render deployment (reports/hosted-validation.json). This verifies one synthetic workflow, not production availability."
   ],
   "limitations": [
     "Real external feedback and interview participation remain pending.",
-    "Public cloud demo is not yet verified; the source repository is available.",
+    "The free hosted lab uses deterministic rules, sleeps on inactivity and loses demo state on restart; it does not run the measured local AI model.",
     "Production connectors, identity, cross-host isolation and service-level reliability are outside this prototype."
   ]
 },

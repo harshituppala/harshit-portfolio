@@ -93,7 +93,7 @@ export const projects: Project[] = [
     },
     {
       "value": "Source",
-      "label": "Public repository \u00b7 hosted demo pending"
+      "label": "Public repository \u00b7 free deterministic demo"
     }
   ],
   "github": "https://github.com/harshituppala/incidentdesk",
