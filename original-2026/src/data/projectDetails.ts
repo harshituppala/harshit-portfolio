@@ -33,25 +33,63 @@ export const projectDetails: Record<string, ProjectDetails> = {
   ]
 },
  atlas: {
-  synopsis: 'A long business document lands on your desk. Hidden inside are requirements, deadlines, and obligations. ATLAS is being built to turn that document into a reviewable workspace: find each requirement, connect it to supporting evidence, and let a person make the final decision.',
-  audience: 'Teams reviewing RFPs, contracts, and technical requirements.',
-  outcome: 'Make document review easier to trace: what was requested, what evidence supports an answer, and what still needs attention.',
-  status: 'Local development · public demo and live access coming after validation',
-  architecture: ['React / TypeScript review interface → FastAPI API', 'Bounded document ingestion → source text and page / paragraph locations', 'Tenant-scoped persistence → retrieval → evidence-linked analysis', 'Human review → auditable decisions'],
-  decisions: ['Keep source evidence attached to analysis so reviewers can inspect the underlying text.', 'Treat documents as untrusted input and enforce tenant boundaries.', 'Separate deterministic baselines from live model behavior so evaluation remains meaningful.'],
-  validation: ["A live browser check followed one synthetic requirement through the interface, FastAPI, an isolated Bedrock worker and SQLite, then reopened the saved review and highlighted its source. No request mocks or provider stubs were used (reports/browser-model-validation.json).", "The earlier API-only live-model check is recorded separately in reports/model-job-backend.json. Neither check measures general model accuracy. The browser run did not separately capture frontend build identity.", "All 18 groups passed in a local PostgreSQL 18.6 integration run, including restricted logins, tenant isolation, pinned job publication, review and rollback. It used controlled model output; source hashes were captured after the run (reports/model-job-postgres.json).", "A Linux ARM64 Compose run exercised the separate API and worker with PostgreSQL/pgvector, competing reviews and retained approval/audit data after stack recreation. It covered one synthetic baseline workflow, not live-model PostgreSQL, load or backup recovery (reports/compose.json).", "These checks establish specific local paths. They do not establish cloud deployment, production reliability or representative model accuracy."],
-  limitations: ['Still under active development; capabilities change by milestone.', 'A small authored live v4 hostile-evidence diagnostic recorded forbidden-appendix citation contamination, a threshold interpretation error and false-positive suppression of legitimate training evidence (reports/injection-pairs-live-v4.json). This does not measure production attack prevalence or exfiltration resistance.', 'No public production deployment or published model-quality benchmark yet.', 'Scanned-document OCR is outside the initial ingestion scope.']
- },
+  "synopsis": "An RFP asks for recovery within four hours. The capability register guarantees eight. ATLAS keeps the requirement, evidence and review decision together so a reviewer can inspect that mismatch before responding.",
+  "audience": "Teams reviewing RFPs and contract requirements.",
+  "outcome": "Trace each assessment to its source and keep the final decision with the reviewer.",
+  "status": "Fictional review lab live · full service in development",
+  "docsUrl": "https://github.com/harshituppala/atlas-chaoslab/tree/main/src/atlas",
+  "architecture": [
+    "React review workbench → FastAPI → database-backed jobs.",
+    "Isolated worker → extracted obligations → retrieved evidence → validated citations.",
+    "Versioned review and audit writes commit together.",
+    "Optional Bedrock inference selects evidence choices; the default baseline runs offline."
+  ],
+  "decisions": [
+    "Use database leases so a crashed worker can be replaced without allowing an old attempt to publish.",
+    "Keep exact source identity separate from the question of whether evidence supports a requirement.",
+    "Keep private uploads and model credentials out of the public synthetic lab."
+  ],
+  "validation": [
+    "The corrected GitHub run passed 460 backend tests, ten private-workbench browser tests, three static-viewer tests and three synthetic-lab browser tests. Eighteen optional PostgreSQL groups were skipped.",
+    "Hosted HTTPS checks validated eight requirements and fourteen exact source spans, human review, stale conflicts, session isolation and secure cookies.",
+    "A real hosted Chromium workflow checked desktop/mobile source inspection, review, reload and logout. A provider restart rejected the previous session before expiry and permitted a fresh analysis.",
+    "Separate local PostgreSQL, container and logical-restore reports cover their own versions and workflows. These checks do not establish representative contract accuracy."
+  ],
+  "limitations": [
+    "The public lab accepts only fictional seeded records, uses the offline baseline and loses history after expiry or restart. Free hosting sleeps when idle.",
+    "Real managed sign-in and durable hosted storage remain unfinished.",
+    "The optional model path retains a threshold error and hostile-evidence contamination on small development datasets. Scanned-document OCR is not implemented."
+  ],
+  "liveUrl": "https://atlas-review-lab.onrender.com"
+},
  chaoslab: {
-  synopsis: 'The demo works. Then a tool times out, a source contains hostile instructions, or a model returns an unexpected answer. CHAOSLAB is being built to examine those moments, using repeatable scenarios to reveal where an AI workflow holds up and where it breaks.',
-  audience: 'Developers who need evidence that an AI workflow behaves reliably.',
-  outcome: 'Replace a single impressive demonstration with repeatable observations about quality and failure behavior.',
-  status: 'Evaluation foundations in development · public demo pending',
-  architecture: ['Scenario definitions → isolated evaluation runs', 'ATLAS adapter → observed outputs and failure behavior', 'Assertions and scoring → reproducible reports'],
-  decisions: ['Keep the evaluator independently useful rather than embedding its conclusions inside the system under test.', 'Record experiment configuration alongside results.', 'Distinguish deterministic regression checks from probabilistic model-quality evaluation.'],
-  validation: ['Baseline evaluation components are being developed alongside ATLAS.', 'No aggregate success rate is claimed on this portfolio.', 'Public reports will identify dataset size, scoring rules, and known gaps.'],
-  limitations: ['Broader fault injection, tracing, and model comparison remain evolving scope.', 'A passing scenario suite does not establish universal agent safety.']
- },
+  "synopsis": "A valid JSON response and a real citation can still produce a wrong assessment. CHAOSLAB checks those properties separately, then preserves the failures so the next experiment has something concrete to improve.",
+  "audience": "Developers evaluating bounded AI workflows.",
+  "outcome": "Make quality regressions, operational errors and evidence contamination visible.",
+  "status": "Working evaluator · public reports · separate packaging in progress",
+  "docsUrl": "https://github.com/harshituppala/atlas-chaoslab/tree/main/src/chaoslab",
+  "architecture": [
+    "Label-free JSON inputs → trusted adapter process → independently scored outputs.",
+    "Golden expectations → extraction, relation, citation and review-state checks.",
+    "Paired raw runs → obligation transitions, missing cases and reproducible reports."
+  ],
+  "decisions": [
+    "Keep expected labels out of adapter inputs.",
+    "Compare saved outputs under the same dataset and scorer rather than comparing unrelated percentages.",
+    "Record operational failures and unrun cases instead of counting them as safe abstention."
+  ],
+  "validation": [
+    "The published live paired run passed eight of twelve synthetic cases and retained one forbidden-source citation.",
+    "Seven authored recovery scenarios passed through the newer isolated local runner; lease clocks were simulated.",
+    "GitHub CI passed the published baseline, adversarial, reasoning, recovery and ingestion checks, alongside the application suites. Failed model-quality cases remain in the reports."
+  ],
+  "limitations": [
+    "These are same-author development fixtures, not blinded external evaluation.",
+    "The subprocess boundary runs trusted adapters; it is not a sandbox for arbitrary hostile code.",
+    "A passing fixture suite does not establish general agent reliability.",
+    "Core runners and scorers are separate from ATLAS decision logic; bundled retrieval probes and the current dependency setup still use ATLAS."
+  ]
+},
  patchwork: {
   synopsis: 'A build fails. Instead of handing an agent the entire codebase and hoping for the best, PATCHWORK will start with a narrow failure, propose a small fix, and test it in isolation. A person will review the proposed change before it is merged.',
   audience: 'Software teams investigating recurring CI failures.',

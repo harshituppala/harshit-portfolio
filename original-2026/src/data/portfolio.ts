@@ -63,54 +63,54 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-{
-  "id": "incidentdesk",
-  "title": "IncidentDesk",
-  "year": "2026",
-  "genre": "Operational recovery \u2022 Prototype",
-  "logline": "Investigate a failing checkout/payment service, inspect the evidence, and approve a bounded recovery with verification and rollback.",
-  "stack": [
-    "Python",
-    "HTTP services",
-    "SQLite",
-    "Docker",
-    "Local models"
-  ],
-  "build": [
-    "A local operational recovery lab with correlated evidence, two recovery runbooks and explicit human approval.",
-    "Rules remain the default. Measured local-model failures and unfinished real-user feedback are documented."
-  ],
-  "features": [
-    "Evidence-bound recovery proposals",
-    "Human approval and stale-state guards",
-    "Verification and conditional rollback",
-    "Documented model failures"
-  ],
-  "metrics": [
-    {
-      "value": "Prototype",
-      "label": "Project status"
+  {
+    "id": "incidentdesk",
+    "title": "IncidentDesk",
+    "year": "2026",
+    "genre": "Operational recovery • Prototype",
+    "logline": "Investigate a failing checkout/payment service, inspect the evidence, and approve a bounded recovery with verification and rollback.",
+    "stack": [
+      "Python",
+      "HTTP services",
+      "SQLite",
+      "Docker",
+      "Local models"
+    ],
+    "build": [
+      "A local operational recovery lab with correlated evidence, two recovery runbooks and explicit human approval.",
+      "Rules remain the default. Measured local-model failures and unfinished real-user feedback are documented."
+    ],
+    "features": [
+      "Evidence-bound recovery proposals",
+      "Human approval and stale-state guards",
+      "Verification and conditional rollback",
+      "Documented model failures"
+    ],
+    "metrics": [
+      {
+        "value": "Prototype",
+        "label": "Project status"
+      },
+      {
+        "value": "Source",
+        "label": "Public repository · free deterministic demo"
+      }
+    ],
+    "github": "https://github.com/harshituppala/incidentdesk",
+    "palette": {
+      "from": "#102116",
+      "via": "#315a39",
+      "to": "#0a100c",
+      "accent": "#bdfa8c"
     },
-    {
-      "value": "Source",
-      "label": "Public repository \u00b7 free deterministic demo"
-    }
-  ],
-  "github": "https://github.com/harshituppala/incidentdesk",
-  "palette": {
-    "from": "#102116",
-    "via": "#315a39",
-    "to": "#0a100c",
-    "accent": "#bdfa8c"
+    "motif": "flow"
   },
-  "motif": "flow"
-},
   {
     "id": "atlas",
     "title": "ATLAS",
     "year": "2026",
-    "genre": "Applied AI • In development",
-    "logline": "From dense documents to traceable decisions. A workspace for requirements, supporting evidence, and human review.",
+    "genre": "Applied AI • Fictional lab live",
+    "logline": "Review RFP requirements against capability records, inspect exact source excerpts and record a human decision.",
     "stack": [
       "Python",
       "FastAPI",
@@ -119,8 +119,8 @@ export const projects: Project[] = [
       "PostgreSQL"
     ],
     "build": [
-      "Developing a document intelligence workflow for RFP and contract requirements, with source-linked evidence and explicit human review.",
-      "The local implementation is evolving through tested milestones. Live model quality and AWS deployment will be reported only after validation."
+      "Compare RFP requirements with capability evidence, inspect original excerpts and record a human review.",
+      "The free fictional lab runs the extractive baseline. The full service and real managed sign-in remain in development."
     ],
     "features": [
       "Document ingestion and source locations",
@@ -130,12 +130,12 @@ export const projects: Project[] = [
     ],
     "metrics": [
       {
-        "value": "Building",
-        "label": "Project status"
+        "value": "Live",
+        "label": "Fictional review lab"
       },
       {
-        "value": "Local",
-        "label": "Portfolio preview · AWS hosting later"
+        "value": "Public",
+        "label": "Source and measured reports"
       }
     ],
     "palette": {
@@ -144,14 +144,15 @@ export const projects: Project[] = [
       "to": "#0b0710",
       "accent": "#ff3d5a"
     },
-    "motif": "shield"
+    "motif": "shield",
+    "github": "https://github.com/harshituppala/atlas-chaoslab/tree/main/src/atlas"
   },
   {
     "id": "chaoslab",
     "title": "CHAOSLAB",
     "year": "2026",
-    "genre": "AI reliability • In development",
-    "logline": "Beyond the perfect demo. Repeatable experiments that reveal how AI workflows behave under pressure.",
+    "genre": "Agent evaluation • Public source",
+    "logline": "Evaluate agent outputs against fixed cases, inject failures and compare runs without hiding regressions.",
     "stack": [
       "Python",
       "pytest",
@@ -159,8 +160,8 @@ export const projects: Project[] = [
       "Fault injection"
     ],
     "build": [
-      "Developing an independent evaluation companion to ATLAS, focused on reproducible test cases and failure behavior.",
-      "The goal is to compare quality, latency, and cost with traceable experiments. Published benchmarks will follow validated runs."
+      "Run fixed scenarios through a trusted adapter and score extraction, evidence relations, citations and failure behavior.",
+      "Reports retain missing attempts and incorrect answers. Separate packaging and broader independent data remain in progress."
     ],
     "features": [
       "Reproducible evaluation scenarios",
@@ -170,12 +171,12 @@ export const projects: Project[] = [
     ],
     "metrics": [
       {
-        "value": "Building",
-        "label": "Project status"
+        "value": "Public",
+        "label": "Source code"
       },
       {
-        "value": "Local",
-        "label": "Portfolio preview · AWS hosting later"
+        "value": "Passing",
+        "label": "GitHub CI"
       }
     ],
     "palette": {
@@ -184,7 +185,8 @@ export const projects: Project[] = [
       "to": "#05080d",
       "accent": "#4cc9ff"
     },
-    "motif": "flow"
+    "motif": "flow",
+    "github": "https://github.com/harshituppala/atlas-chaoslab/tree/main/src/chaoslab"
   },
   {
     "id": "patchwork",
@@ -575,7 +577,7 @@ export type TopPick = { label: string; title: string; detail: string; palette: P
 
 export const topPicks: TopPick[] = [
   {
-    "label": "Flagship in progress",
+    "label": "Document review",
     "title": "ATLAS",
     "detail": "Requirements → evidence → human review",
     "palette": {
@@ -586,7 +588,7 @@ export const topPicks: TopPick[] = [
     }
   },
   {
-    "label": "Reliability in progress",
+    "label": "Agent evaluation",
     "title": "CHAOSLAB",
     "detail": "Test how AI behaves when things go wrong",
     "palette": {
