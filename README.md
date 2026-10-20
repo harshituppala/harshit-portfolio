@@ -1,82 +1,33 @@
-Personal Portfolio — Harshit Uppala
+# Harshit Uppala — Portfolio
 
-This is my personal developer portfolio, built to showcase my technical projects, skills, and background in a clean, modern, and professional way.
-It highlights my backend-focused work, DevOps interests, and real deployed applications.
+A portfolio of my software and Applied AI projects, with source links, demonstrations, engineering decisions and evaluation limits.
 
-⸻
-Live Demo
+**[Visit the current portfolio](https://harshit-uppala-portfolio.vercel.app)** · **[Browse the current source](https://github.com/harshituppala/harshit-portfolio/tree/portfolio/original-2026/original-2026)**
 
-https://harshit-portfolio-tv36.onrender.com
+## Where the current application lives
 
-⸻
+The current React, TypeScript and Vite application is in [`original-2026/` on the `portfolio/original-2026` branch](https://github.com/harshituppala/harshit-portfolio/tree/portfolio/original-2026/original-2026). Its README covers project content, validation and dependency attribution.
 
-🚀 Tech Stack
-•	React (Vite) — Frontend framework
-•	Modern CSS — Responsive layout, custom components
-•	GitHub Pages / Render — Deployment-ready
-•	SVG Icons — Lightweight, fast, accessible
+This repository’s default `main` branch retains the earlier JavaScript portfolio. Its root application and history are preserved. [Pull request #1](https://github.com/harshituppala/harshit-portfolio/pull/1) tracks the current presentation separately; this documentation update does not merge it or change the default build.
 
-⸻
+## Explore the work
 
-📁 Project Sections
+- [ATLAS and CHAOSLAB](https://github.com/harshituppala/atlas-chaoslab): evidence-linked document review and independent reliability evaluation. Documentation distinguishes synthetic evaluations from broader accuracy claims.
+- [IncidentDesk](https://github.com/harshituppala/incidentdesk): incident investigation and guarded recovery in a synthetic operational lab. The hosted demonstration and measured local model runs have different scopes.
 
-Featured Projects
+The portfolio links to the relevant source, demonstrations and limitations. A reachable demonstration is not a claim of production readiness.
 
-The portfolio includes live links and source code for my key projects:
+## Run the current portfolio locally
 
-🔹 Pipeline Monitor
-Real-time ETL pipeline tracker with environment filters and execution metadata.
-Code: https://github.com/harshituppala/pipeline-monitor
-Live Demo: https://pipeline-monitor.onrender.com
+```sh
+git clone --branch portfolio/original-2026 https://github.com/harshituppala/harshit-portfolio.git
+cd harshit-portfolio/original-2026
+pnpm install --frozen-lockfile
+pnpm dev
+```
 
-🔹 Multi-Agent Orchestrator
-A modular backend system coordinating Research, Analysis, and Task agents with Wikipedia API integration.
-Code: https://github.com/harshituppala/multi-agent-ai
-Live Demo: https://multi-agent-ai-1.onrender.com
+Run `pnpm build` for TypeScript checking and the production build. Deployment is managed separately; a repository push does not automatically publish the site.
 
-🔹 BitCheck
-A lightweight BTC address lookup tool with clean UI and live deployed backend.
-Code: https://github.com/harshituppala/bitcheck
-Live Demo: https://bitcheck-wrk5.onrender.com
+## Connect
 
-⸻
-
-🧠 Skills Highlighted
-•	Languages: JavaScript, Python, Java, SQL
-•	Backend: Node.js, Express, REST APIs
-•	Frontend: React, UI Components, CSS
-•	DevOps / Tools: Git, GitHub, Docker, AWS basics
-
-⸻
-
-🎓 Education
-
-B.Sc. Computer Science
-Memorial University of Newfoundland
-Minor in Business Administration — Expected Graduation: Dec 2026
-
-⸻
-
-📄 Resume
-
-A downloadable PDF is available directly in the portfolio:
-
-/public/resume.pdf
-
-Button on the live site triggers the download automatically.
-
-⸻
-
-To Run Locally type the following commnds into the terminal within the directory.
-
-npm install
-npm run dev
-
-Portfolio will start on:
-
-http://localhost:5173
-
-Contact
-•	Email: hkuppala@mun.ca
-•	LinkedIn: https://www.linkedin.com/in/harshit-kumar-uppala-8b65271a5
-•	GitHub: https://github.com/harshituppala
+[GitHub](https://github.com/harshituppala) · [LinkedIn](https://www.linkedin.com/in/harshit-kumar-uppala-8b65271a5) · [Portfolio and résumé](https://harshit-uppala-portfolio.vercel.app)
