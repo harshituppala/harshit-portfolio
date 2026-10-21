@@ -1,23 +1,19 @@
 # Harshit Uppala — Portfolio
 
-A portfolio of my software and Applied AI projects, with source links, demonstrations, engineering decisions and evaluation limits.
+My project portfolio, built with React, TypeScript and Vite. Browse the projects, open a demo, or read the engineering notes behind it.
 
-**[Visit the current portfolio](https://harshit-uppala-portfolio.vercel.app)** · **[Browse the current source](https://github.com/harshituppala/harshit-portfolio/tree/portfolio/original-2026/original-2026)**
+**[Open the portfolio](https://harshit-uppala-portfolio.vercel.app)** · **[Current source](https://github.com/harshituppala/harshit-portfolio/tree/portfolio/original-2026/original-2026)**
 
-## Where the current application lives
+## Projects
 
-The current React, TypeScript and Vite application is in [`original-2026/` on the `portfolio/original-2026` branch](https://github.com/harshituppala/harshit-portfolio/tree/portfolio/original-2026/original-2026). Its README covers project content, validation and dependency attribution.
+- [ATLAS + CHAOSLAB](https://github.com/harshituppala/atlas-chaoslab): document review with source passages, plus an evaluator for extraction, citations and failures.
+- [IncidentDesk](https://github.com/harshituppala/incidentdesk): a synthetic checkout-service lab for investigating failures and reviewing recovery actions.
 
-This repository’s default `main` branch retains the earlier JavaScript portfolio. Its root application and history are preserved. [Pull request #1](https://github.com/harshituppala/harshit-portfolio/pull/1) tracks the current presentation separately; this documentation update does not merge it or change the default build.
+The demos use fictional data. Project pages link to the tests, design decisions and known limits.
 
-## Explore the work
+## Run locally
 
-- [ATLAS and CHAOSLAB](https://github.com/harshituppala/atlas-chaoslab): evidence-linked document review and independent reliability evaluation. Documentation distinguishes synthetic evaluations from broader accuracy claims.
-- [IncidentDesk](https://github.com/harshituppala/incidentdesk): incident investigation and guarded recovery in a synthetic operational lab. The hosted demonstration and measured local model runs have different scopes.
-
-The portfolio links to the relevant source, demonstrations and limitations. A reachable demonstration is not a claim of production readiness.
-
-## Run the current portfolio locally
+The current app is in `original-2026/` on branch `portfolio/original-2026`. This default branch still contains the earlier site.
 
 ```sh
 git clone --branch portfolio/original-2026 https://github.com/harshituppala/harshit-portfolio.git
@@ -26,8 +22,8 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Run `pnpm build` for TypeScript checking and the production build. Deployment is managed separately; a repository push does not automatically publish the site.
+`pnpm build` checks TypeScript and creates the production build. Hosting is managed separately from repository pushes.
 
-## Connect
+## Contact
 
-[GitHub](https://github.com/harshituppala) · [LinkedIn](https://www.linkedin.com/in/harshit-kumar-uppala-8b65271a5) · [Portfolio and résumé](https://harshit-uppala-portfolio.vercel.app)
+[LinkedIn](https://www.linkedin.com/in/harshit-kumar-uppala-8b65271a5) · [Portfolio and résumé](https://harshit-uppala-portfolio.vercel.app)
