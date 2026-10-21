@@ -66,7 +66,7 @@ export const projectDetails: Record<string, ProjectDetails> = {
   "synopsis": "A valid JSON response and a real citation can still produce a wrong assessment. CHAOSLAB checks those properties separately, then preserves the failures so the next experiment has something concrete to improve.",
   "audience": "Developers evaluating bounded AI workflows.",
   "outcome": "Make quality regressions, operational errors and evidence contamination visible.",
-  "status": "Working evaluator · public reports · separate packaging in progress",
+  "status": "Working evaluator · public reports · local standalone package verified",
   "docsUrl": "https://github.com/harshituppala/atlas-chaoslab/tree/main/src/chaoslab",
   "architecture": [
     "Label-free JSON inputs → trusted adapter process → independently scored outputs.",
@@ -81,13 +81,14 @@ export const projectDetails: Record<string, ProjectDetails> = {
   "validation": [
     "The published live paired run passed eight of twelve synthetic cases and retained one forbidden-source citation.",
     "Seven authored recovery scenarios passed through the newer isolated local runner; lease clocks were simulated.",
+    "A local wheel-installation check ran saved-output comparisons outside the source repository without ATLAS installed. It retained a corrupt-citation regression and a missing attempt (reports/chaoslab-package.json); remote CI for this package check is pending.",
     "GitHub CI passed the published baseline, adversarial, reasoning, recovery and ingestion checks, alongside the application suites. Failed model-quality cases remain in the reports."
   ],
   "limitations": [
     "These are same-author development fixtures, not blinded external evaluation.",
     "The subprocess boundary runs trusted adapters; it is not a sandbox for arbitrary hostile code.",
     "A passing fixture suite does not establish general agent reliability.",
-    "Core runners and scorers are separate from ATLAS decision logic; bundled retrieval probes and the current dependency setup still use ATLAS."
+    "The local standalone package covers core comparisons and trusted adapters; ATLAS retrieval and database probes still need their own dependencies. No registry release or independently authored evaluation is established."
   ]
 },
  patchwork: {
