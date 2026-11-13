@@ -267,6 +267,7 @@ export type Certification = { issuer: string; name: string; link?: string; statu
 
 export const certifications: Certification[] = [
  { issuer: 'AWS', name: 'AWS Certified Cloud Practitioner', status: 'Earned', detail: 'Passed. A foundation in cloud concepts, AWS services, security, and cloud economics.' },
+ { issuer: 'Claude Academy', name: 'Building effective human-agent teams (beta)', status: 'Earned', detail: 'Course completion badge issued November 12, 2026.', link: 'https://academy.claude.com/verify/e603a25ac97ee4d0fd1b0f1503fee136' },
  { issuer: 'AWS', name: 'AWS Certified Solutions Architect – Associate', status: 'Exam scheduled', detail: 'Preparing for the next step in designing resilient, secure, and cost-aware AWS architectures.' },
  { issuer: 'Anthropic', name: 'Claude Certified Architect – Foundations', status: 'Planned', detail: 'Planned certification in Claude solution architecture; target November 2026.' },
 ];
